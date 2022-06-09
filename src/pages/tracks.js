@@ -31,7 +31,7 @@ const Tracks = () => {
     <Layout grid>
       <QueryResult error={error} loading={loading} data={data}>
         {data?.tracksForHome?.map((track, index) => (
-          <TrackCard key={track.id} track={track} />
+          <TrackCard key={track.id + '-' + index} track={track} />
         ))}
       </QueryResult>
     </Layout>
